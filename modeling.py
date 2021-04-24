@@ -409,7 +409,7 @@ def create_initializer(initializer_range=0.02):
   if version.parse(tf.__version__)<version.parse("2"):
     return tf.truncated_normal_initializer(stddev=initializer_range)
   else:
-    return tf.compat.v1.truncated_normal_initializer(stddev=initializer_range,dtype=tf.dtypes.float32)
+    return tf.compat.v1.truncated_normal_initializer(stddev=initializer_range)
 
 
 def embedding_lookup(input_ids,
